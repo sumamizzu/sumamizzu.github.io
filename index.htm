@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Emanuele's GitHub Welcome Page</title>
+    <link rel="manifest" href="/manifest.json">
+    <script type="module" src="https://cdn.skypack.dev/@vanillawc/wc-markdown"></script>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+:root {
+  --fg-color: white;
+  --font-main: 'Inconsolata', monospace;
+  /* rebeccapurple */
+  --BG-H: 270;
+  --BG-S: 50%;
+  --BG-L: 40%;
+  --bg-color: hsl(
+    calc(var(--BG-H)),
+    calc(var(--BG-S)),
+    calc(var(--BG-L))
+  );
+  --bg-shaded-color: hsl(
+    calc(var(--BG-H)),
+    calc(var(--BG-S)),
+    calc(var(--BG-L) / 2)
+  );
+  --fg-console-color: hsl(
+    calc(var(--BG-H) + 180),
+    calc(var(--BG-S)),
+    calc(var(--BG-L))
+  );
+  --bg-console-color: black;
+}
+.app-console {
+  background: var(--bg-console-color);
+  color: var(--fg-console-color);
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3rem;
+  left: 0;
+  line-height: 1rem;
+}
+table a img {
+	filter: invert(1) brightness(2) drop-shadow(16px 16px 4px var(--bg-shaded-color));
+	max-height: 100px;
+	padding: 1em;
+}
+body {
+  background: var(--bg-color);
+  font-family: var(--font-main);
+  color: var(--fg-color);
+}
+    </style>
+  </head>
+  <body>
+    <wc-markdown src="README.MD" highlight></wc-markdown>
+  </body>
+</html>
